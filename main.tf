@@ -4,7 +4,6 @@ resource "azurerm_resource_group" "ihong-lab-rg" {
 }
 
 resource "azurerm_cosmosdb_account" "cosmos_account" {
-  enable_free_tier    = true
   ip_range_filter     = local.ip_range
   location            = "westus"
   name                = "oms-${var.db_name}"
