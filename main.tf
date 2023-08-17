@@ -8,6 +8,7 @@ resource "azurerm_cosmosdb_account" "cosmos_account" {
   ip_range_filter     = local.ip_range
   location            = "westus"
   name                = "oms-${var.db_name}"
+  enable_free_tier    = false
 
   offer_type          = "Standard"
   resource_group_name = azurerm_resource_group.ihong-lab-rg.name
